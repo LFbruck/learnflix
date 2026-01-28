@@ -14,6 +14,28 @@ export default function AdicionarMateriais() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true);
+
+        setTimeout(()=> {
+
+                 const novoMaterial = {
+                     id: Date.now(),
+                     titulo: titulo,
+                     descricao: descricao,
+                     nomeArquivo: arquivo.name,
+                     tipoArquivo: arquivo.type,
+                 }
+
+
+
+                 //Função para adicionar aqui
+
+            setTitulo("");
+                 setDescricao("");
+                 setArquivo(null);
+
+            setLoading(false);
+        },2000);
     }
 
     return (
@@ -23,7 +45,7 @@ export default function AdicionarMateriais() {
             <label>Descrição: </label>
             <textarea  value={descricao} placeholder= "Descrição do Conteudo" onChange={(e) => setDescricao(e.target.value)}  />
             <label>Upload Arquivo: </label>
-            <input type="file" onChange={(e) => setArquivo(e.target.files[0]) } accept=".jpg,.png, .pdf, .doc, .docx" required={true} /><button type="submit" disabled={loading}>
+            <input type="file" onChange={(e) => setArquivo(e.target.files[0]) } accept=".jpg,.png,.pdf,.doc,.docx" required={true} /><button type="submit" disabled={loading}>
             {loading ? 'Carregando...' : 'Adicionar Material'}
         </button>
         </form>
