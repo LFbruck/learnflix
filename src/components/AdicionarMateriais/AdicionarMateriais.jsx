@@ -39,7 +39,7 @@ export default function AdicionarMateriais({adicionarMaterial}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}  className={styles.formulario}>
             <label>Titulo: </label>
             <input type="text" value={titulo} placeholder= "Titulo do Material" onChange={(e) => setTitulo(e.target.value)} required={true} />
             <label>Descrição: </label>
