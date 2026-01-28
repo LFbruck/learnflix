@@ -1,5 +1,6 @@
-import AdicionarMateriais from './AdicionarMateriais'
-import ListaMateriais from './ListaMateriais'
+import ListaMateriais from "../ListaMateriais/ListaMateriais"
+import AdicionarMateriais from "../AdicionarMateriais/AdicionarMateriais"
+
 import styles from './PaginaMateriais.module.css'
 import {useState, useEffect} from 'react'
 
