@@ -2,7 +2,7 @@ import styles from "./AdicionarMateriais.module.css"
 import {useState} from "react";
 
 
-export default function AdicionarMateriais() {
+export default function AdicionarMateriais({adicionarMaterial}) {
 
     const [titulo, setTitulo] = useState("");
 
@@ -28,7 +28,7 @@ export default function AdicionarMateriais() {
 
 
 
-                 //Função para adicionar aqui
+                 adicionarMaterial(novoMaterial);
 
             setTitulo("");
                  setDescricao("");

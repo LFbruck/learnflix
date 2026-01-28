@@ -18,6 +18,8 @@ export default function PaginaMateriais() {
 
     return (
         <div className={styles.container}>
+            <AdicionarMateriais adicionarMaterial={adicionarMaterial} />
+            <ListaMateriais materiais={materiais} excluirMaterial={excluirMaterial} />
 
 
         </div>
