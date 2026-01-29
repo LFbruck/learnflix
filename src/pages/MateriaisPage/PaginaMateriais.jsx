@@ -26,7 +26,7 @@ export default function PaginaMateriais() {
 
     return (
         <div className={styles.container}>
-            <h1>Materiais Didaticos</h1>
+            <h1>Materiais Didáticos</h1>
             <AdicionarMateriais adicionarMaterial={adicionarMaterial} />
             <ListaMateriais materiais={materiais} excluirMaterial={excluirMaterial} />
 

@@ -5,8 +5,9 @@
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px 2px #0d5aa8;
-
+    box-shadow: 0 4px 12px rgba(13, 90, 168, 0.25);
+    width: 100%;
+    max-width: 900px;
 }
 .formulario label{
     font-weight: 600;
@@ -25,7 +26,6 @@
     min-height: 80px;
     resize: vertical;
 }
-
 .formulario button {
     padding: 14px;
     background-color: #0d5aa8;
@@ -36,16 +36,17 @@
     font-weight: 600;
     margin-top: 8px;
 }
-
 .formulario button:disabled {
     background-color: #ccc;
 
 }
-
-
 @media (min-width: 768px) {
     .formulario {
-        max-width: 600px;
         margin: 0 auto;
+    }
+}
+@media (min-width: 1200px) {
+    .formulario {
+        max-width: 1100px;
     }
 }
