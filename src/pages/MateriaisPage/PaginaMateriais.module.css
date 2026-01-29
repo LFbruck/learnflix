@@ -1,0 +1,36 @@
+h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 50px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+
+
+@media (min-width: 768px) {
+    .container {
+        align-items: center;
+        padding: 0;
+    }
+
+    .wrapper {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        width: 550px;
+    }
+}
