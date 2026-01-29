@@ -1,9 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider} from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-import HomePage from "../pages/HomePage";
-import LoginPage from "../pages/LoginPage";
-import CadastroPage from "../pages/CadastroPage/CadastroPage";
+import PaginaMateriais from "../components/PaginaMateriais/PaginaMateriais";
 
 const router = createBrowserRouter([
     {
@@ -11,16 +9,8 @@ const router = createBrowserRouter([
         element: <Layout />,
         children: [
             {
-                index: true,
-                element: <HomePage />
-            },
-            {
-                path: "/login",
-                element: <LoginPage />
-            },
-            {
-                path: "/cadastro",
-                element: <CadastroPage />
+                path: "/materiais",
+                element: <PaginaMateriais />
             }
         ]
     }
