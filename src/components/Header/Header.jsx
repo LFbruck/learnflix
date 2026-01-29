@@ -10,6 +10,9 @@ export default function Header() {
                     <Link to={"/"} className={styles.link}>
                         HomePage
                     </Link>
+                    <Link to={"/cadastro"} className={styles.link}>
+                        Cadastro
+                    </Link>
                 </nav>
             </div>
         </header>
