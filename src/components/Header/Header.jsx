@@ -13,6 +13,12 @@ export default function Header() {
                     <Link to={"/cadastro"} className={styles.link}>
                         Cadastro
                     </Link>
+                    <Link to={"/login"} className={styles.link}>
+                        Login
+                    </Link>
+                    <Link to={"/materiais"} className={styles.link}>
+                        Adicionar Materiais
+                    </Link>
                 </nav>
             </div>
         </header>
