@@ -1,5 +1,5 @@
-import ListaMateriais from "../ListaMateriais/ListaMateriais"
-import AdicionarMateriais from "../AdicionarMateriais/AdicionarMateriais"
+import ListaMateriais from "../../components/ListaMateriais/ListaMateriais"
+import AdicionarMateriais from "../../components/AdicionarMateriais/AdicionarMateriais"
 
 import styles from './PaginaMateriais.module.css'
 import {useState, useEffect} from 'react'
@@ -26,6 +26,7 @@ export default function PaginaMateriais() {
 
     return (
         <div className={styles.container}>
+            <h1>Materiais Didaticos</h1>
             <AdicionarMateriais adicionarMaterial={adicionarMaterial} />
             <ListaMateriais materiais={materiais} excluirMaterial={excluirMaterial} />
 

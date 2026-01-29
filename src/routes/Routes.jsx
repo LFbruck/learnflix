@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider} from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-import PaginaMateriais from "../components/PaginaMateriais/PaginaMateriais";
+import PaginaMateriais from "../pages/MateriaisPage/PaginaMateriais";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import CadastroPage from "../pages/CadastroPage";
