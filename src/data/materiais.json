@@ -1,0 +1,42 @@
+{
+  "disciplinas": [
+    {
+      "id": 1,
+      "nome": "Desenvolvimento Front-end",
+      "materiais": [
+        {
+          "id": 1,
+          "titulo": "Introdução ao React",
+          "tipo": "pdf",
+          "dataPublicacao": "2026-02-01",
+          "arquivo": "/files/react-introducao.pdf"
+        },
+        {
+          "id": 2,
+          "titulo": "Componentes e Props",
+          "tipo": "ppt",
+          "dataPublicacao": "2026-02-03",
+          "arquivo": "/files/componentes-props.ppt"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Banco de Dados",
+      "materiais": [
+        {
+          "id": 3,
+          "titulo": "Modelagem Relacional",
+          "tipo": "pdf",
+          "dataPublicacao": "2026-01-25",
+          "arquivo": "/files/modelagem-relacional.pdf"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Engenharia de Software",
+      "materiais": []
+    }
+  ]
+}
