@@ -5,6 +5,7 @@ import PaginaMateriais from "../pages/MateriaisPage/PaginaMateriais";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import CadastroPage from "../pages/CadastroPage";
+import VisitasPage from "../pages/VisitasPage";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: "/materiais",
                 element: <PaginaMateriais />
+            },
+            {
+                path: "/visualizar",
+                element: <VisitasPage />
             }
         ]
     }
