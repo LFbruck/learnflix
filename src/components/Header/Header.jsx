@@ -30,6 +30,9 @@ export default function Header() {
                     <Link to={"/materiais"} className={styles.link}>
                         Adicionar Materiais
                     </Link>
+                    <Link to={"/visualizar"} className={styles.link}>
+                        Visualizar Materiais
+                    </Link>
                 </nav>
             </div>
         </header>

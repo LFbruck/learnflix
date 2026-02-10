@@ -1,4 +1,4 @@
-import styles from "./VisualizarPage.module.scss";
+import styles from "./VisualizarPage.module.css";
 import dados from "../../data/materiais.json";
 
 export default function VisualizarPage() {
