@@ -1,10 +1,10 @@
 import ListaMateriais from "../../components/ListaMateriais/ListaMateriais"
 import AdicionarMateriais from "../../components/AdicionarMateriais/AdicionarMateriais"
 
-import styles from './PaginaMateriais.module.css'
+import styles from './MateriaisPage.module.css'
 import {useState, useEffect} from 'react'
 
-export default function PaginaMateriais() {
+export default function MateriaisPage() {
     const [materiais, setMateriais] = useState([
         {titulo: 'Fundamentos do React', descricao: "Aula 1 de Fundamento do React", nomeArquivo: "Aula1-Fundamento do React", id: 1, tipoArquivo: "PDF"},
         {titulo: 'Fundamentos do React', descricao: "Aula 2 de Fundamento do React", nomeArquivo: "Aula2-FR", id: 2, tipoArquivo: "PDF"},
