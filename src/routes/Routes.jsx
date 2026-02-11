@@ -1,7 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import { RouterProvider} from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
+
 import { MateriaisPage, LoginPage, HomePage, CadastroPage } from "../pages";
+import VisualizarPage from "../pages/VisualizarPage";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path: "/materiais",
                 element: <MateriaisPage />
+            },
+            {
+                path: "/visualizar",
+                element: <VisualizarPage />
             }
         ]
     }
