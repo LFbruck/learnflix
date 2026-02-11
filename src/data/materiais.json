@@ -17,6 +17,13 @@
           "tipo": "ppt",
           "dataPublicacao": "2026-02-03",
           "arquivo": "/files/componentes-props.ppt"
+        },
+        {
+          "id": 3,
+          "titulo": "Hooks Básicos",
+          "tipo": "pdf",
+          "dataPublicacao": "2026-02-05",
+          "arquivo": "/files/hooks-basicos.pdf"
         }
       ]
     },
@@ -25,11 +32,25 @@
       "nome": "Banco de Dados",
       "materiais": [
         {
-          "id": 3,
+          "id": 4,
           "titulo": "Modelagem Relacional",
           "tipo": "pdf",
           "dataPublicacao": "2026-01-25",
           "arquivo": "/files/modelagem-relacional.pdf"
+        },
+        {
+          "id": 5,
+          "titulo": "Normalização de Dados",
+          "tipo": "pdf",
+          "dataPublicacao": "2026-01-28",
+          "arquivo": "/files/normalizacao.pdf"
+        },
+        {
+          "id": 6,
+          "titulo": "Consultas SQL Básicas",
+          "tipo": "doc",
+          "dataPublicacao": "2026-02-02",
+          "arquivo": "/files/sql-basico.doc"
         }
       ]
     },
@@ -37,6 +58,47 @@
       "id": 3,
       "nome": "Engenharia de Software",
       "materiais": []
+    },
+    {
+      "id": 4,
+      "nome": "Estruturas de Dados",
+      "materiais": [
+        {
+          "id": 7,
+          "titulo": "Listas e Pilhas",
+          "tipo": "pdf",
+          "dataPublicacao": "2026-01-20",
+          "arquivo": "/files/listas-pilhas.pdf"
+        },
+        {
+          "id": 8,
+          "titulo": "Filas e Árvores",
+          "tipo": "ppt",
+          "dataPublicacao": "2026-01-30",
+          "arquivo": "/files/filas-arvores.ppt"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Redes de Computadores",
+      "materiais": [
+        {
+          "id": 9,
+          "titulo": "Modelo OSI",
+          "tipo": "pdf",
+          "dataPublicacao": "2026-02-04",
+          "arquivo": "/files/modelo-osi.pdf"
+        },
+        {
+          "id": 10,
+          "titulo": "Protocolos TCP/IP",
+          "tipo": "pdf",
+          "dataPublicacao": "2026-02-06",
+          "arquivo": "/files/tcp-ip.pdf"
+        }
+      ]
     }
   ]
 }
+
