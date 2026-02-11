@@ -28,7 +28,7 @@ export default function Header() {
                         Login
                     </Link>
                     <Link to={"/materiais"} className={styles.link}>
-                        Adicionar Materiais
+                        Materiais Didáticos
                     </Link>
                     <Link to={"/visualizar"} className={styles.link}>
                         Visualizar Materiais
