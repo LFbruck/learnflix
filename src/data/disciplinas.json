@@ -1,0 +1,94 @@
+{
+  "disciplinas": [
+    {
+      "id": 1,
+      "nome": "Algoritmos e Estruturas de Dados I",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 35
+    },
+    {
+      "id": 2,
+      "nome": "Programação Orientada a Objetos",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 42
+    },
+    {
+      "id": 3,
+      "nome": "Banco de Dados I",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 28
+    },
+    {
+      "id": 4,
+      "nome": "Engenharia de Software",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 31
+    },
+    {
+      "id": 5,
+      "nome": "Desenvolvimento Web Front-end",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "qtdeAlunos": 45
+    },
+    {
+      "id": 6,
+      "nome": "Redes de Computadores",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 23
+    },
+    {
+      "id": 7,
+      "nome": "Sistemas Operacionais",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 19
+    },
+    {
+      "id": 8,
+      "nome": "Segurança da Informação",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 27
+    },
+    {
+      "id": 9,
+      "nome": "Inteligência Artificial",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 38
+    },
+    {
+      "id": 10,
+      "nome": "Arquitetura de Software",
+      "codigo": "",
+      "descricao": "",
+      "semestre": "",
+      "status": "",
+      "alunosMatriculados": 50
+    }
+  ]
+}
