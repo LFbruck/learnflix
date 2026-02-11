@@ -2,103 +2,120 @@
   "disciplinas": [
     {
       "id": 1,
-      "nome": "Desenvolvimento Front-end",
+      "nome": "Frontend com React",
       "materiais": [
         {
           "id": 1,
           "titulo": "Introdução ao React",
-          "tipo": "pdf",
-          "dataPublicacao": "2026-02-01",
-          "arquivo": "/files/react-introducao.pdf"
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "10/02/2026",
+          "arquivo": "#"
         },
         {
           "id": 2,
           "titulo": "Componentes e Props",
-          "tipo": "ppt",
-          "dataPublicacao": "2026-02-03",
-          "arquivo": "/files/componentes-props.ppt"
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "12/02/2026",
+          "arquivo": "#"
         },
         {
           "id": 3,
-          "titulo": "Hooks Básicos",
-          "tipo": "pdf",
-          "dataPublicacao": "2026-02-05",
-          "arquivo": "/files/hooks-basicos.pdf"
+          "titulo": "Hooks na prática",
+          "tipo": "VIDEO",
+          "icone": "🎥",
+          "data": "15/02/2026",
+          "arquivo": "#"
         }
       ]
     },
     {
       "id": 2,
-      "nome": "Banco de Dados",
+      "nome": "JavaScript Avançado",
       "materiais": [
         {
           "id": 4,
-          "titulo": "Modelagem Relacional",
-          "tipo": "pdf",
-          "dataPublicacao": "2026-01-25",
-          "arquivo": "/files/modelagem-relacional.pdf"
+          "titulo": "Closures Explicado",
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "08/02/2026",
+          "arquivo": "#"
         },
         {
           "id": 5,
-          "titulo": "Normalização de Dados",
-          "tipo": "pdf",
-          "dataPublicacao": "2026-01-28",
-          "arquivo": "/files/normalizacao.pdf"
+          "titulo": "Promises e Async/Await",
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "11/02/2026",
+          "arquivo": "#"
         },
         {
           "id": 6,
-          "titulo": "Consultas SQL Básicas",
-          "tipo": "doc",
-          "dataPublicacao": "2026-02-02",
-          "arquivo": "/files/sql-basico.doc"
+          "titulo": "Event Loop na prática",
+          "tipo": "VIDEO",
+          "icone": "🎥",
+          "data": "18/02/2026",
+          "arquivo": "#"
         }
       ]
     },
     {
       "id": 3,
-      "nome": "Engenharia de Software",
-      "materiais": []
-    },
-    {
-      "id": 4,
-      "nome": "Estruturas de Dados",
+      "nome": "UX e UI Design",
       "materiais": [
         {
           "id": 7,
-          "titulo": "Listas e Pilhas",
-          "tipo": "pdf",
-          "dataPublicacao": "2026-01-20",
-          "arquivo": "/files/listas-pilhas.pdf"
+          "titulo": "Fundamentos de UX",
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "05/02/2026",
+          "arquivo": "#"
         },
         {
           "id": 8,
-          "titulo": "Filas e Árvores",
-          "tipo": "ppt",
-          "dataPublicacao": "2026-01-30",
-          "arquivo": "/files/filas-arvores.ppt"
+          "titulo": "Wireframes e Protótipos",
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "09/02/2026",
+          "arquivo": "#"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Banco de Dados",
+      "materiais": [
+        {
+          "id": 9,
+          "titulo": "Modelagem Relacional",
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "03/02/2026",
+          "arquivo": "#"
+        },
+        {
+          "id": 10,
+          "titulo": "SQL Básico",
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "06/02/2026",
+          "arquivo": "#"
+        },
+        {
+          "id": 11,
+          "titulo": "Consultas Avançadas SQL",
+          "tipo": "PDF",
+          "icone": "📄",
+          "data": "14/02/2026",
+          "arquivo": "#"
         }
       ]
     },
     {
       "id": 5,
-      "nome": "Redes de Computadores",
-      "materiais": [
-        {
-          "id": 9,
-          "titulo": "Modelo OSI",
-          "tipo": "pdf",
-          "dataPublicacao": "2026-02-04",
-          "arquivo": "/files/modelo-osi.pdf"
-        },
-        {
-          "id": 10,
-          "titulo": "Protocolos TCP/IP",
-          "tipo": "pdf",
-          "dataPublicacao": "2026-02-06",
-          "arquivo": "/files/tcp-ip.pdf"
-        }
-      ]
+      "nome": "Engenharia de Software",
+      "materiais": []
     }
   ]
 }
-
