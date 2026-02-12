@@ -1,0 +1,29 @@
+.card{
+    background: white;
+    padding: 32px;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.codigo {
+    font-weight: bold;
+}
+
+.status {
+    color: #30C638;
+}
