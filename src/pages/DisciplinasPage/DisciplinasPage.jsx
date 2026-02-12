@@ -30,15 +30,22 @@ export default function DisciplinasPage() {
                 <h1 className={styles.title}>Disciplinas</h1>
                 <button className={styles.btnCriarDisciplina}></button>
             </div>
-            <div className={styles.gridCards}>
-                {disciplinas.filter(d => d.status).length === 0 ? (
-                    <p>Nenhuma disciplina ativa no momento. Clique em "Criar Disciplina" para começar.</p>
-                ) : (
-                    disciplinas
-                        .filter(d => d.status)
-                        .map(disc => <CardDisciplina key={disc.id} {...disc}/>)
-                )}
-            </div>
+            {loading ? (
+                <p>Carregando Disciplinas...</p>
+            ) : (
+                <div className={styles.gridCards}>
+                    {error ? (
+                        <p>Erro ao carregar disciplinas: {error}</p>
+                    ) : (
+                        disciplinas.filter(d => d.status).length === 0 ? (
+                                <p>Nenhuma disciplina ativa no momento. Clique em "Criar Disciplina" para começar.</p>
+                            ) : (
+                                disciplinas
+                                    .filter(d => d.status)
+                                    .map(disc => <CardDisciplina key={disc.id} {...disc}/>)
+                            ))}
+                </div>
+            )}
         </div>
     );
 }
