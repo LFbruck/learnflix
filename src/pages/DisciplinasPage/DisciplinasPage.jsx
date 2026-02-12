@@ -28,7 +28,7 @@ export default function DisciplinasPage() {
         <div className={styles.container}>
             <div className={styles.nav}>
                 <h1 className={styles.title}>Disciplinas</h1>
-                <button className={styles.btnCriarDisciplina}></button>
+                <button className={styles.btnCriarDisciplina}>Criar Disciplina</button>
             </div>
             {loading ? (
                 <p>Carregando Disciplinas...</p>
