@@ -1,6 +1,7 @@
 import styles from "./DisciplinasPage.module.css";
 import getDisciplinas from "../../services/disciplinasService";
 import { useEffect, useState } from "react";
+import { CardDisciplina } from "../../components";
 
 export default function DisciplinasPage() {
     const [disciplinas, setDisciplinas] = useState([]);
@@ -30,7 +31,13 @@ export default function DisciplinasPage() {
                 <button className={styles.btnCriarDisciplina}></button>
             </div>
             <div className={styles.gridCards}>
-                {/*<CardDisciplina />*/}
+                {disciplinas.filter(d => d.status).length === 0 ? (
+                    <p>Nenhuma disciplina ativa no momento. Clique em "Criar Disciplina" para começar.</p>
+                ) : (
+                    disciplinas
+                        .filter(d => d.status)
+                        .map(disc => <CardDisciplina key={disc.id} {...disc}/>)
+                )}
             </div>
         </div>
     );
