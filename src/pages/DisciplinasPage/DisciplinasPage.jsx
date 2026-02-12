@@ -7,6 +7,12 @@ export default function DisciplinasPage() {
     const [disciplinas, setDisciplinas] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [termoBusca, setTermoBusca] = useState("");
+
+    const disciplinasFiltradas = disciplinas.filter(disc =>
+        disc.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
+        disc.codigo?.toLowerCase().includes(termoBusca.toLowerCase())
+    );
 
     async function carregarDisciplinas() {
         try {
@@ -30,20 +36,30 @@ export default function DisciplinasPage() {
                 <h1 className={styles.title}>Disciplinas</h1>
                 <button className={styles.btnCriarDisciplina}>Criar Disciplina</button>
             </div>
+
+            <div className={styles.containerBusca}>
+                <input
+                    type="text"
+                    placeholder="Digite o nome ou código da disciplina..."
+                    value={termoBusca}
+                    onChange={e => setTermoBusca(e.target.value)}
+                    className={styles.inputBusca}
+                />
+            </div>
+
             {loading ? (
                 <p>Carregando Disciplinas...</p>
             ) : (
                 <div className={styles.gridCards}>
                     {error ? (
                         <p>Erro ao carregar disciplinas: {error}</p>
+                    ) : disciplinasFiltradas.length === 0 ? (
+                        <p>Nenhuma disciplina encontrada.</p>
                     ) : (
-                        disciplinas.filter(d => d.status).length === 0 ? (
-                                <p>Nenhuma disciplina ativa no momento. Clique em "Criar Disciplina" para começar.</p>
-                            ) : (
-                                disciplinas
-                                    .filter(d => d.status)
-                                    .map(disc => <CardDisciplina key={disc.id} {...disc}/>)
-                            ))}
+                        disciplinasFiltradas.map(disc => (
+                            <CardDisciplina key={disc.id} {...disc} />
+                        ))
+                    )}
                 </div>
             )}
         </div>
