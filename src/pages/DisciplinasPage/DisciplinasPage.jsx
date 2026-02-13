@@ -2,12 +2,14 @@ import styles from "./DisciplinasPage.module.css";
 import getDisciplinas from "../../services/disciplinasService";
 import { useEffect, useState } from "react";
 import { CardDisciplina } from "../../components";
+import ModalDisciplina from "../../components/ModalDisciplina";
 
 export default function DisciplinasPage() {
     const [disciplinas, setDisciplinas] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [termoBusca, setTermoBusca] = useState("");
+    const [modalAberto, setModalAberto] = useState(false);
 
     const disciplinasFiltradas = disciplinas.filter(disc =>
         disc.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
@@ -24,6 +26,14 @@ export default function DisciplinasPage() {
         } finally {
             setLoading(false);
         }
+    }
+
+    function abrirModal() {
+        setModalAberto(true);
+    }
+
+    function fecharModal() {
+        setModalAberto(false);
     }
 
     useEffect(() => {
@@ -43,8 +53,12 @@ export default function DisciplinasPage() {
                     className={styles.inputBusca}
                 />
 
-                <button className={styles.btnCriarDisciplina}>Criar Disciplina</button>
+                <button onClick={abrirModal} className={styles.btnCriarDisciplina}>Criar Disciplina</button>
             </div>
+
+            {modalAberto && (
+                <ModalDisciplina onClose={fecharModal} />
+            )}
 
             {loading ? (
                 <p>Carregando Disciplinas...</p>
