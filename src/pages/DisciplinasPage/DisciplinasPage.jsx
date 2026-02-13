@@ -32,10 +32,7 @@ export default function DisciplinasPage() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.nav}>
-                <h1 className={styles.title}>Disciplinas</h1>
-                <button className={styles.btnCriarDisciplina}>Criar Disciplina</button>
-            </div>
+            <h1 className={styles.title}>Disciplinas</h1>
 
             <div className={styles.containerBusca}>
                 <input
@@ -45,6 +42,8 @@ export default function DisciplinasPage() {
                     onChange={e => setTermoBusca(e.target.value)}
                     className={styles.inputBusca}
                 />
+
+                <button className={styles.btnCriarDisciplina}>Criar Disciplina</button>
             </div>
 
             {loading ? (

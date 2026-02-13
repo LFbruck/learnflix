@@ -1,16 +1,71 @@
 .container {
-    width: 100%;
+    padding: 2rem;
+    max-width: 1200px;
     margin: 0 auto;
-    min-height: 100vh;
+}
+
+.title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.containerBusca {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 0 1rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.inputBusca {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.inputBusca:focus {
+    border-color: #4a90e2;
+}
+
+.inputBusca::placeholder {
+    color: #999;
+}
+
+.btnCriarDisciplina {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.btnCriarDisciplina:hover {
+    background-color: #357abd;
+}
+
+.btnCriarDisciplina:active {
+    transform: scale(0.98);
 }
 
 .gridCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    padding: 2rem;
+}
+
+.gridCards > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-size: 1.1rem;
 }
