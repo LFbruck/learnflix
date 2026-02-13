@@ -57,7 +57,7 @@ export default function DisciplinasPage() {
             </div>
 
             {modalAberto && (
-                <ModalDisciplina onClose={fecharModal} />
+                <ModalDisciplina onClose={fecharModal} disciplinas={disciplinas}/>
             )}
 
             {loading ? (
