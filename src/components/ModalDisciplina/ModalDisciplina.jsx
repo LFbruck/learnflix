@@ -1,11 +1,22 @@
 import styles from "./ModalDisciplina.module.css";
 import { useForm} from "react-hook-form";
 
-export default function ModalDisciplina({ onClose, disciplinas }) {
-    const { register, handleSubmit, formState: { errors }} = useForm();
+export default function ModalDisciplina({ onClose, adicionarDisciplina }) {
+    const { register, handleSubmit, formState: { errors }, reset} = useForm();
 
     function onSubmit(data) {
-        console.log('Dados validados:', data);
+        const novaDisciplina = {
+            id: Date.now(),
+            nome: data.nome,
+            codigo: data.codigo,
+            descricao: data.descricao,
+            semestre: data.semestre,
+            status: "ativa",
+            alunosMatriculados: 0
+        };
+
+        adicionarDisciplina(novaDisciplina);
+        reset();
         onClose();
     }
 
@@ -19,21 +30,18 @@ export default function ModalDisciplina({ onClose, disciplinas }) {
                 <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 
                     <div className={styles.campo}>
-                        <label htmlFor="disciplinaId">Disciplina</label>
-                        <select
-                            id="disciplinaId"
-                            {...register('disciplinaId', {
-                                required: 'Selecione uma disciplina'
+                        <label htmlFor="nome">Disciplina</label>
+                        <input
+                            id="nome"
+                            type="text"
+                            placeholder="Nome da disciplina"
+                            {...register('nome', {
+                                required: 'Nome da disciplina é obrigatório',
+                                minLength: { value: 6, message: 'Mínimo 6 caracteres' }
                             })}
-                            defaultValue=""
-                        >
-                            <option value="" disabled>Selecione uma disciplina...</option>
-                            {disciplinas.map(disc => (
-                                <option key={disc.id} value={disc.id}>{disc.nome}</option>
-                            ))}
-                        </select>
-                        {errors.disciplinaId && (
-                            <span className={styles.erro}>{errors.disciplinaId.message}</span>
+                        />
+                        {errors.nome && (
+                            <span className={styles.erro}>{errors.nome.message}</span>
                         )}
                     </div>
 

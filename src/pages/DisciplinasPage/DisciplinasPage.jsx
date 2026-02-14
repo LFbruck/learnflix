@@ -28,6 +28,10 @@ export default function DisciplinasPage() {
         }
     }
 
+    function adicionarDisciplina(novaDisciplina) {
+        setDisciplinas([...disciplinas, novaDisciplina]);
+    }
+
     function abrirModal() {
         setModalAberto(true);
     }
@@ -57,7 +61,7 @@ export default function DisciplinasPage() {
             </div>
 
             {modalAberto && (
-                <ModalDisciplina onClose={fecharModal} disciplinas={disciplinas}/>
+                <ModalDisciplina onClose={fecharModal} adicionarDisciplina={adicionarDisciplina}/>
             )}
 
             {loading ? (
