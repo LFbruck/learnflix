@@ -1,10 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import { RouterProvider} from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-import PaginaMateriais from "../pages/MateriaisPage/PaginaMateriais";
-import HomePage from "../pages/HomePage";
-import LoginPage from "../pages/LoginPage";
-import CadastroPage from "../pages/CadastroPage";
+
+import { MateriaisPage, LoginPage, HomePage, CadastroPage, DisciplinasPage } from "../pages";
+import VisualizarPage from "../pages/VisualizarPage";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +24,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "/materiais",
-                element: <PaginaMateriais />
+                element: <MateriaisPage />
+            },
+            {
+                path: "/visualizar",
+                element: <VisualizarPage />
+            },
+            {
+                path: "/disciplinas",
+                element: <DisciplinasPage />
             }
         ]
     }
