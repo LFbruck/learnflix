@@ -40,7 +40,12 @@
     text-transform: uppercase;
 }
 
-.btnEditar {
+.btns {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card button {
     padding: 0.65rem 1.4rem;
     font-size: 1rem;
     font-weight: 600;
@@ -53,10 +58,33 @@
     white-space: nowrap;
 }
 
+.card button:active {
+    transform: scale(0.98);
+}
+
+.btnEditar {
+    color: black;
+    background-color: #ffc000;
+}
+
 .btnEditar:hover {
     background-color: #d5a100;
 }
 
-.btnEditar:active {
-    transform: scale(0.98);
+.card .btnStatusInativo {
+    color: white;
+    background-color: red;
+}
+
+.card .btnStatusInativo:hover {
+    background-color: #c0392b;
+}
+
+.card .btnStatusAtivo {
+    color: white;
+    background-color: #30C638;
+}
+
+.card .btnStatusAtivo:hover {
+    background-color: #27ae60;
 }

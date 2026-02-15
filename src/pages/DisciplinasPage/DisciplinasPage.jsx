@@ -51,6 +51,20 @@ export default function DisciplinasPage() {
         setModalAberto(false);
     }
 
+    function toggleStatus(id) {
+        const disciplinaStatus = disciplinas.map(disc => {
+            if (disc.id === id) {
+                return {
+                    ...disc,
+                    status: disc.status === "ativa" ? "inativa" : "ativa"
+                };
+            }
+            return disc;
+        });
+
+        setDisciplinas(disciplinaStatus);
+    }
+
     useEffect(() => {
         carregarDisciplinas();
     }, [])
@@ -90,7 +104,11 @@ export default function DisciplinasPage() {
                         <p>Nenhuma disciplina encontrada.</p>
                     ) : (
                         disciplinasFiltradas.map(disc => (
-                            <CardDisciplina key={disc.id} disc={disc} onAbrirModalEdicao={abrirModalEdicao} />
+                            <CardDisciplina
+                                key={disc.id}
+                                disc={disc}
+                                onAbrirModalEdicao={abrirModalEdicao}
+                                onToggleStatus={toggleStatus}/>
                         ))
                     )}
                 </div>
