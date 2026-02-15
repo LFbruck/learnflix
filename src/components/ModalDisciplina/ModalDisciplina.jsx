@@ -1,7 +1,8 @@
 import styles from "./ModalDisciplina.module.css";
 import { useForm} from "react-hook-form";
+import { useEffect } from "react";
 
-export default function ModalDisciplina({ onClose, adicionarDisciplina }) {
+export default function ModalDisciplina({ onClose, adicionarDisciplina, disciplinaParaEditar, onAtualizarDisciplina }) {
     const { register, handleSubmit, formState: { errors }, reset} = useForm();
 
     function onSubmit(data) {
@@ -15,10 +16,32 @@ export default function ModalDisciplina({ onClose, adicionarDisciplina }) {
             alunosMatriculados: 0
         };
 
-        adicionarDisciplina(novaDisciplina);
-        reset();
-        onClose();
+        if (!disciplinaParaEditar) {
+            adicionarDisciplina(novaDisciplina);
+            reset();
+            onClose();
+        } else {
+            const disciplinaEditada = {
+                ...disciplinaParaEditar,
+                nome: data.nome,
+                codigo: disciplinaParaEditar.codigo,
+                descricao: disciplinaParaEditar.descricao,
+                semestre: disciplinaParaEditar.semestre
+            }
+            onAtualizarDisciplina(disciplinaEditada);
+        }
     }
+
+    useEffect(() => {
+        if (disciplinaParaEditar) {
+            reset({
+                nome: disciplinaParaEditar.nome,
+                codigo: disciplinaParaEditar.codigo,
+                descricao: disciplinaParaEditar.descricao,
+                semestre: disciplinaParaEditar.semestre
+            });
+        }
+    }, [disciplinaParaEditar, reset])
 
     return (
         <div className={styles.overlay} onClick={onClose}>

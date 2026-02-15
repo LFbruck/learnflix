@@ -10,6 +10,7 @@ export default function DisciplinasPage() {
     const [error, setError] = useState(null);
     const [termoBusca, setTermoBusca] = useState("");
     const [modalAberto, setModalAberto] = useState(false);
+    const [disciplinaParaEditar, setDisciplinaParaEditar] = useState();
 
     const disciplinasFiltradas = disciplinas.filter(disc =>
         disc.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
@@ -32,7 +33,17 @@ export default function DisciplinasPage() {
         setDisciplinas([...disciplinas, novaDisciplina]);
     }
 
-    function abrirModal() {
+    function atualizarDisciplina(disciplinaAtualizada) {
+        setDisciplinas(disciplinas.map(disc => disc.id === disciplinaAtualizada.id ? disciplinaAtualizada : disc));
+        fecharModal();
+    }
+
+    function abrirModalCriacao() {
+        setModalAberto(true);
+    }
+
+    function abrirModalEdicao(disciplina) {
+        setDisciplinaParaEditar(disciplina);
         setModalAberto(true);
     }
 
@@ -57,11 +68,16 @@ export default function DisciplinasPage() {
                     className={styles.inputBusca}
                 />
 
-                <button onClick={abrirModal} className={styles.btnCriarDisciplina}>Criar Disciplina</button>
+                <button onClick={abrirModalCriacao} className={styles.btnCriarDisciplina}>Criar Disciplina</button>
             </div>
 
             {modalAberto && (
-                <ModalDisciplina onClose={fecharModal} adicionarDisciplina={adicionarDisciplina}/>
+                <ModalDisciplina
+                    onClose={fecharModal}
+                    adicionarDisciplina={adicionarDisciplina}
+                    disciplinaParaEditar={disciplinaParaEditar}
+                    onAtualizarDisciplina={atualizarDisciplina}
+                />
             )}
 
             {loading ? (
@@ -74,7 +90,7 @@ export default function DisciplinasPage() {
                         <p>Nenhuma disciplina encontrada.</p>
                     ) : (
                         disciplinasFiltradas.map(disc => (
-                            <CardDisciplina key={disc.id} {...disc} />
+                            <CardDisciplina key={disc.id} disc={disc} onAbrirModalEdicao={abrirModalEdicao} />
                         ))
                     )}
                 </div>
