@@ -33,6 +33,9 @@ export default function Header() {
                     <Link to={"/visualizar"} className={styles.link}>
                         Visualizar Materiais
                     </Link>
+                    <Link to={"/disciplinas"} className={styles.link}>
+                        Gerenciar Disciplinas
+                    </Link>
                 </nav>
             </div>
         </header>

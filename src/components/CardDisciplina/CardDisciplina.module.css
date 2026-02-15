@@ -1,0 +1,145 @@
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title {
+    font-size: 1.35rem;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.codigo,
+.alunos {
+    font-size: 0.95rem;
+}
+
+.span {
+    color: black;
+    font-weight: bold;
+}
+
+.status {
+    color: #30C638;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.statusInativa {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btns {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.card button {
+    flex: 1;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.card button:active {
+    transform: scale(0.98);
+}
+
+.btnEditar {
+    color: black;
+    background-color: #ffc000;
+}
+
+.btnEditar:hover {
+    background-color: #d5a100;
+}
+
+.card .btnStatusInativo {
+    color: white;
+    background-color: red;
+}
+
+.card .btnStatusInativo:hover {
+    background-color: #c0392b;
+}
+
+.card .btnStatusAtivo {
+    color: white;
+    background-color: #30C638;
+}
+
+.card .btnStatusAtivo:hover {
+    background-color: #27ae60;
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 1.75rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        gap: 0.85rem;
+    }
+
+    .btns {
+        gap: 1rem;
+    }
+
+    .card button {
+        padding: 0.65rem 1.2rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        padding: 2rem;
+        min-height: 300px;
+        justify-content: space-between;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .info {
+        gap: 1rem;
+    }
+
+    .codigo,
+    .alunos {
+        font-size: 1rem;
+    }
+
+    .btns {
+        gap: 1.5rem;
+    }
+
+    .card button {
+        padding: 0.65rem 1.4rem;
+        font-size: 1rem;
+    }
+}
