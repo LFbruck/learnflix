@@ -49,7 +49,6 @@ describe("VisualizarPage", () => {
         render(<VisualizarPage />);
         const botoesAcessar = screen.getAllByRole("button", { name: /acessar/i });
         userEvent.click(botoesAcessar[4]);
-
         expect(screen.getByText("Engenharia de Software")).toBeInTheDocument();
         expect(
             screen.getByText(/esta disciplina ainda não possui materiais/i)
