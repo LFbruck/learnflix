@@ -25,9 +25,9 @@ describe("VisualizarPage", () => {
         userEvent.click(botoesAcessar[0]);
         expect(screen.getByRole("button", { name: /voltar/i })).toBeInTheDocument();
         expect(screen.getByText("Frontend com React")).toBeInTheDocument();
-        expect(screen.getByText("Introdução ao React")).toBeInTheDocument();
-        expect(screen.getByText("Componentes e Props")).toBeInTheDocument();
-        expect(screen.getByText("Hooks na prática")).toBeInTheDocument();
+        expect(screen.getByRole("link", { name: /introdução ao react/i })).toBeInTheDocument();
+        expect(screen.getByRole("link", { name: /componentes e props/i })).toBeInTheDocument();
+        expect(screen.getByRole("link", { name: /hooks na prática/i })).toBeInTheDocument();
 
         expect(screen.getAllByRole("link")).toHaveLength(3);
     });
