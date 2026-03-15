@@ -19,3 +19,24 @@ describe("VisualizarPage", () => {
         const botoesAcessar = screen.getAllByRole("button", { name: /acessar/i });
         expect(botoesAcessar).toHaveLength(5);
     });
+    test("acessa disciplina e visualizar materiais", async () => {
+        const user = userEvent.setup();
+
+        render(<VisualizarPage />);
+        const botoesAcessar = screen.getAllByRole("button", { name: /acessar/i });
+        await user.click(botoesAcessar[0]);
+
+        expect(
+            screen.getByRole("button", { name: /voltar/i })
+        ).toBeInTheDocument();
+
+        expect(
+            screen.getByRole("heading", { name: /frontend com react/i })
+        ).toBeInTheDocument();
+        expect(screen.getByText(/introdução ao react/i)).toBeInTheDocument();
+        expect(screen.getByText(/componentes e props/i)).toBeInTheDocument();
+        expect(screen.getByText(/hooks na prática/i)).toBeInTheDocument();
+
+        const linksMateriais = screen.getAllByRole("link");
+        expect(linksMateriais).toHaveLength(3);
+    });
