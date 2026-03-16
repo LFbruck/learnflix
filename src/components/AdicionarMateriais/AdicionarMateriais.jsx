@@ -37,6 +37,7 @@ export default function AdicionarMateriais({adicionarMaterial}) {
         },2000);
     }
 
+
     return (
         <form onSubmit={handleSubmit}  className={styles.formulario}>
             <label htmlFor={"titulo"}>Titulo: </label>
